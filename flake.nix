@@ -20,6 +20,17 @@
           }
         ];
       };
+      ether = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          ./hosts/ether.nix
+          ./configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useUserPackages = true;
+            home-manager.users.fba = import ./fba/hm.nix;
+          }
+        ];
+      };
     };
   };
 }

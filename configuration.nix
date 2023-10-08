@@ -2,8 +2,6 @@
 {
   imports =
     [ 
-      #<home-manager/nixos>
-      ./hosts/vether.nix
       ./common/configuration.nix
       ./common/ssh.nix
     ];
