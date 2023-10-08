@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, home-manager, ... }:
 {
-  home-manager.users.fba = { pkgs, ... } : {
+  #home-manager.users.fba = { pkgs, ... } : {
     home.stateVersion = "23.05";
     programs.bash = {
       enable = true;
@@ -11,5 +11,5 @@
     programs.oh-my-posh = {
       enable = true;
     };
-  };
+  # };
 }

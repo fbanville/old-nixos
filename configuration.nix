@@ -1,11 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, home-manager, ... }:
 {
   imports =
     [ 
-      <home-manager/nixos>
+      #<home-manager/nixos>
       ./hosts/vether.nix
       ./common/configuration.nix
-      ./common/hm.nix
       ./common/ssh.nix
     ];
    nix = {
