@@ -2,9 +2,6 @@
 {
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
   # Latest linux kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.networkmanager.enable = true;
