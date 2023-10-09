@@ -4,6 +4,7 @@
     [ 
       ./common/configuration.nix
       ./common/ssh.nix
+      ./common/gnome.nix
     ];
    nix = {
     package = pkgs.nixFlakes;
