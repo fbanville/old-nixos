@@ -18,5 +18,6 @@
     gnomeExtensions.dash-to-dock-animator
     gnomeExtensions.gnome-40-ui-improvements
     gnomeExtensions.gesture-improvements
+    mojave-gtk-theme
   ];
 }

@@ -26,3 +26,7 @@ cd ~/.config/nixos
 git remote set-url origin git@github.com:fbanville/nixos.git
 git push
 ```
+
+## Adding a new machine
+- find hardware module in https://github.com/NixOS/nixos-hardware/blob/master/flake.nix
+
