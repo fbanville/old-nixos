@@ -5,7 +5,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     home-manager.url   = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    inputs.agenix.url = "github:ryantm/agenix";
+    agenix.url = "github:ryantm/agenix";
   };
   outputs = { self, nixpkgs, nix, nixos-hardware, home-manager, agenix }: {
     nixosConfigurations = {
