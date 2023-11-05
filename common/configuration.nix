@@ -19,12 +19,14 @@
     xkbVariant = "intl";
   };
   console.keyMap = "us-acentos";
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "fba";
-  # Workaround for GNOME autologin: 
-  # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
+
+  # remove autologin, cool but unsafe :-)
+  # services.xserver.displayManager.autoLogin.enable = true;
+  # services.xserver.displayManager.autoLogin.user = "fba";
+  # # Workaround for GNOME autologin: 
+  # # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  # systemd.services."getty@tty1".enable = false;
+  # systemd.services."autovt@tty1".enable = false;
 
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [ hplipWithPlugin ];
