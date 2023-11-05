@@ -5,9 +5,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     home-manager.url   = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    agenix.url = "github:ryantm/agenix";
   };
-  outputs = { self, nixpkgs, nix, nixos-hardware, home-manager, agenix }: {
+  outputs = { self, nixpkgs, nix, nixos-hardware, home-manager }: {
     nixosConfigurations = {
       satori = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -19,7 +18,6 @@
             home-manager.useUserPackages = true;
             home-manager.users.fba = import ./fba/hm.nix;
           }
-	  agenix.nixosModules.default
         ];
       };
       vether = nixpkgs.lib.nixosSystem {
