@@ -11,7 +11,8 @@
       satori = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          nixos-hardware.nixosModules.framework
+          #nixos-hardware.nixosModules.framework
+          nixos-hardware.nixosModules.framework-11th-gen-intel
           ./hosts/satori.nix
           ./configuration.nix
           home-manager.nixosModules.home-manager {
