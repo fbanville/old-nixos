@@ -27,4 +27,5 @@
     userName = "François Banville";
     userEmail = "waf@banber.org";
   };
+  programs.direnv.enable = true;
 }
