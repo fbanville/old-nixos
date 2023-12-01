@@ -29,4 +29,13 @@
     userEmail = "waf@banber.org";
   };
   programs.direnv.enable = true;
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      dracula-theme.theme-dracula
+      #vscodevim.vim
+      yzhang.markdown-all-in-one
+      vscode-extensions.mgt19937.typst-preview
+    ];
+  };
 }
