@@ -1,4 +1,13 @@
 # nixos
+
+This is my NixOS configuration. It is work in progress, learning flake and home-manager stuff.
+It is not clear how I would reinstall on a new server. This is untested.
+
+I've tried to manage my whole configuration with Nix but it looks just not possible yet.
+I decided to try to complete the setup with a [[dotfile]] management system using only git and some aliases.
+
+
+
 NixOS configuration files for all my worstations. It uses home-manager and flakes.
 ## New installation (hostname already exists in repo)
 - Install NixOS using an appropriate ISO
@@ -12,7 +21,9 @@ sudo nixos-rebuild switch
 ```
 ## Create a new version
 ```
-cd ~/.config/nixos
+cd ~/.config/nixosff.
+
+
 # change the necessary files
 git add . --all
 git commit -m "new stuff" 

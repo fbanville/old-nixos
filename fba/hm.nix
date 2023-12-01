@@ -10,6 +10,7 @@
     enable = true;
     shellAliases = {
       vi = "nvim";
+      config = "git --git-dir=/home/fba/.cfg/ --work-tree=/home/fba";
     };
   };
   programs.oh-my-posh = {
