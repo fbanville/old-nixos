@@ -10,7 +10,7 @@
     gnomeExtensions.weather-oclock
     #gnomeExtensions.blur-my-shell
     gnomeExtensions.notification-banner-position
-    gnomeExtensions.custom-vpn-toggler
+    #gnomeExtensions.custom-vpn-toggler
     gnome.adwaita-icon-theme
     gnomeExtensions.compiz-alike-magic-lamp-effect
     gnomeExtensions.quick-settings-tweaker
