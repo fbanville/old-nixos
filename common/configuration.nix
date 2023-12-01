@@ -28,6 +28,7 @@
   # systemd.services."getty@tty1".enable = false;
   # systemd.services."autovt@tty1".enable = false;
 
+
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [ hplipWithPlugin ];
   hardware.sane.enable = true;

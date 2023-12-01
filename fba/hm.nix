@@ -29,6 +29,7 @@
     userEmail = "waf@banber.org";
   };
   programs.direnv.enable = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
