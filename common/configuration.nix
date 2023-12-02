@@ -79,6 +79,8 @@
     gnumake
     chromium
     obsidian
+    plex-media-player
+    plexamp
   ];
   system.stateVersion = "23.05"; # Did you read the comment?
 }
