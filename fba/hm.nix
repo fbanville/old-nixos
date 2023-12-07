@@ -37,7 +37,7 @@
       #vscodevim.vim
       yzhang.markdown-all-in-one
       mgt19937.typst-preview
-      kamadorueda.alejand
+      kamadorueda.alejandra
     ];
   };
 }

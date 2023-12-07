@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   # Bootloader.
   # Latest linux kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -23,16 +25,15 @@
   # remove autologin, cool but unsafe :-)
   # services.xserver.displayManager.autoLogin.enable = true;
   # services.xserver.displayManager.autoLogin.user = "fba";
-  # # Workaround for GNOME autologin: 
+  # # Workaround for GNOME autologin:
   # # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   # systemd.services."getty@tty1".enable = false;
   # systemd.services."autovt@tty1".enable = false;
 
-
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [ hplipWithPlugin ];
+  services.printing.drivers = with pkgs; [hplipWithPlugin];
   hardware.sane.enable = true;
-  hardware.sane.extraBackends = with pkgs; [ hplipWithPlugin ];
+  hardware.sane.extraBackends = with pkgs; [hplipWithPlugin];
   hardware.opengl = {
     enable = true;
     driSupport32Bit = true;
@@ -57,17 +58,24 @@
   users.users.fba = {
     isNormalUser = true;
     description = "François Banville";
-    extraGroups = [ 
-      "networkmanager" "wheel" 
-      "docker" "libvirtd"
-      "kvm" "audio" "disk" "video" "network" 
-      "systemd-journal" "lp" "scanner" 
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+      "libvirtd"
+      "kvm"
+      "audio"
+      "disk"
+      "video"
+      "network"
+      "systemd-journal"
+      "lp"
+      "scanner"
     ];
     packages = with pkgs; [
       firefox
     ];
   };
-
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
@@ -79,8 +87,9 @@
     gnumake
     chromium
     obsidian
-    plex-media-player
+    # plex-media-player broken
     plexamp
+    inetutils # for telnet
   ];
   system.stateVersion = "23.05"; # Did you read the comment?
 }
