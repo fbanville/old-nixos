@@ -77,6 +77,9 @@
     ];
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0" # for foliate
+  ];
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     neofetch
