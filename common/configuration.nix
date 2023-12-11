@@ -90,6 +90,7 @@
     # plex-media-player broken
     plexamp
     inetutils # for telnet
+    foliate
   ];
   system.stateVersion = "23.05"; # Did you read the comment?
 }
