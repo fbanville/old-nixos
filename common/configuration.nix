@@ -77,6 +77,35 @@
     ];
   };
 
+  virtualisation =  {
+    docker = {
+      enable = true;
+      autoPrune.enable = true;
+      storageDriver = "overlay2";
+      #extraOptions = "--iptables=false";
+    };
+    libvirtd.enable = true;
+    waydroid.enable = true;
+    lxd.enable = true;
+  };
+  
+#  virtualisation.oci-containers = {
+#    backend = "docker";
+#    containers.tresorit = {
+#      autoStart = true;
+#      image = "tresorit:latest";
+#      user = "1000:100";
+#      volumes = [
+#        "/home/fba/docker/tresorit/Profiles:/home/tresorit/Profiles"
+#        "/home/fba/Tresors:/home/tresorit/external"
+#      ];
+#      environment = {
+#        SYNC_ONLY = "true";
+#      };
+#      extraOptions = [ "--rm" ];
+#    };
+#  };
+
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0" # for foliate
   ];
@@ -95,6 +124,12 @@
     inetutils # for telnet
     foliate
     calibre
+    docker
+    docker-compose
+    virt-manager
+    screen
+    restic
+    libreoffice
   ];
   system.stateVersion = "23.05"; # Did you read the comment?
 }
