@@ -87,6 +87,11 @@
     libvirtd.enable = true;
     waydroid.enable = true;
     lxd.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = false; # `docker` alias for podman
+      defaultNetwork.settings.dns_enabled = true; # podman-compose able to talk to each other.
+    };
   };
   
 #  virtualisation.oci-containers = {
