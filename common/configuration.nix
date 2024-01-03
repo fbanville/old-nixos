@@ -8,7 +8,15 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.networkmanager.enable = true;
-  networking.firewall.enable = true;
+  networking.firewall = {
+    enable = true; # Enables firewall, all ports should be closed.
+    nftables.enable = true; # uses nfttables rather than iptables.
+    # allowedTCPPorts = [ 80 443 ];
+    # allowedUDPPortRanges = [
+    #   { from = 4000; to = 4007; }
+    #   { from = 8000; to = 8010; }
+    # ];
+  };
 
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
