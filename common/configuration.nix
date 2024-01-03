@@ -5,12 +5,12 @@
 }: {
   # Bootloader.
   # Latest linux kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest; # always use the latest kernel (bleeding edge stuff!)
 
   networking.networkmanager.enable = true;
+  networking.nftables.enable = true; # uses nfttables rather than iptables.
   networking.firewall = {
     enable = true; # Enables firewall, all ports should be closed.
-    nftables.enable = true; # uses nfttables rather than iptables.
     # allowedTCPPorts = [ 80 443 ];
     # allowedUDPPortRanges = [
     #   { from = 4000; to = 4007; }
