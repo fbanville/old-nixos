@@ -38,6 +38,7 @@
       yzhang.markdown-all-in-one
       mgt19937.typst-preview
       kamadorueda.alejandra
+      rust-lang.rust-analyzer
     ];
   };
 }

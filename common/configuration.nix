@@ -145,6 +145,14 @@
     libreoffice
     sshfs
     imagemagick
+    rustc
+    cargo
+    rustfmt
+    gcc
+    openssl
+    pkg-config
+    clippy
+    jq
   ];
   system.stateVersion = "23.05"; # Did you read the comment?
 }

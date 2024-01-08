@@ -13,7 +13,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.editor = false;
-  boot.loader.timeout = 0;
+  boot.loader.timeout = 3; # show menu for nixos build
   boot.kernelParams = [
     "quiet" 
     "rd.systemd.show_status=false" 
