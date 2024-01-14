@@ -9,7 +9,18 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      vi = "nvim";
+       # vi = "nvim";
+      vi = "hx";
+      ls = "eza";
+      lsd = "eza --long --header --git --only-dirs";
+      lss = "eza --long --header --git --sort size";
+      lsn = "eza --long --header --git --sort name";
+      lsm = "eza --long --header --git --sort mod";
+      lse = "eza --long --header --git --sort ext";
+      z  = "zoxide";
+      cat = "bat";
+      top = "bottom";
+      ps = "procs";
       config = "git --git-dir=/home/fba/.cfg/ --work-tree=/home/fba";
     };
   };
@@ -21,7 +32,8 @@
   home.file = {
   };
   home.sessionVariables = {
-    EDITOR = "nvim";
+    # EDITOR = "nvim";
+    EDITOR = "hx";
   };
   programs.git = {
     enable = true;

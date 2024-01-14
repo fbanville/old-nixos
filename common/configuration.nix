@@ -155,6 +155,7 @@
     rnr     # rename
     xh      # curl, wget
     xcp     # cp
+    zoxide  # cd
 
     # screen replaced by zellij
 
