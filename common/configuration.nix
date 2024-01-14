@@ -124,35 +124,64 @@
   ];
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    neofetch
-    neovim
+
+    # Applications
     bitwarden-cli
-    bat
-    glow
-    gnumake
     chromium
     obsidian
-    # plex-media-player broken
     plexamp
-    inetutils # for telnet
+    libreoffice
+    virt-manager
     foliate
     calibre
-    docker
-    docker-compose
-    virt-manager
-    screen
+    # plex-media-player broken
+
+    # rust cli replacement
+    bat     # cat
+    glow    # markdown display
+    eza     # ls
+    procs   # ps
+    sd      # sed
+    du-dust # du
+    ripgrep # grep
+    bottom  # top
+    tealdeer # tldr
+    bandwhich # bandwidt by process
+    felix   # tui file manager
+    inlyne  # markdown browser
+    just    # make/makefile replacement
+    lfs     # df
+    rm-improved # rm
+    rnr     # rename
+    xh      # curl, wget
+    xcp     # cp
+
+    # screen replaced by zellij
+
+    # Tools
+    neofetch
+    neovim # Use helix now mate
     restic
-    libreoffice
     sshfs
     imagemagick
+    openssl
+    jq
+    docker
+    docker-compose
+    inetutils # for telnet
+
+    # Rust toolchain
+    gcc
+    gnumake
+    zellij
+    helix
+    starship
     rustc
     cargo
-    rustfmt
-    gcc
-    openssl
-    pkg-config
     clippy
-    jq
+    pkg-config
+    rustfmt
+    rust-analyzer
   ];
   system.stateVersion = "23.05"; # Did you read the comment?
 }
