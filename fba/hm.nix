@@ -19,7 +19,7 @@
       lse = "eza --long --header --git --sort ext";
       z  = "zoxide";
       cat = "bat";
-      top = "bottom";
+      top = "btm";
       ps = "procs";
       config = "git --git-dir=/home/fba/.cfg/ --work-tree=/home/fba";
     };
@@ -52,5 +52,14 @@
       kamadorueda.alejandra
       rust-lang.rust-analyzer
     ];
+  };
+  programs.atuin = {
+    enable = true;
+    settings = {
+      sync_address = "https://history.banber.org";
+      sync_frequency = "5m";
+      # dialect = "uk";
+      # key_path = config.sops.secrets.atuin_key.path;
+    };
   };
 }
