@@ -135,6 +135,8 @@
     foliate
     calibre
     # plex-media-player broken
+    celeste
+    spacedrive
 
     # rust cli replacement
     bat     # cat

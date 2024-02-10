@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     gnome.gnome-tweaks
+    gnome.gnome-boxes
     gnomeExtensions.appindicator
     gnomeExtensions.bing-wallpaper-changer
     gnomeExtensions.transparent-top-bar-adjustable-transparency
